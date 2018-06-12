@@ -1,0 +1,9 @@
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\bin\Debug\SQL_Project.exe.config
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\bin\Debug\SQL_Project.exe
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\bin\Debug\SQL_Project.pdb
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_Project.csprojResolveAssemblyReference.cache
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_Project.MainForm.resources
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_Project.Properties.Resources.resources
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_Project.csproj.GenerateResource.Cache
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_Project.exe
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_Project.pdb
