@@ -24,8 +24,8 @@ namespace SQL_Project
         public DataTable Count(SqlConnection connectionstring,string tabela)
         {
             DataTable result = new DataTable();
-            result = selectAllFrom(connectionstring, tabela);
-            SqlDataAdapter adapter = new SqlDataAdapter("HAVING COUNT(" + tabela + "ID)", connectionstring);
+            //result = selectAllFrom(connectionstring, tabela);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT COUNT(" + tabela + "ID) FROM " + tabela, connectionstring);
             adapter.Fill(result);
 
             return result;
