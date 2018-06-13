@@ -17,8 +17,7 @@ namespace SQL_Project
         Utilities util = new Utilities();
         DataTable result;
         SqlConnection c;
-        string myFertilizer = "X";
-        string myTerrain = "Y";
+        int myFertilizer = 15, myTerrain = 2;
 
         int i;
 
@@ -34,6 +33,7 @@ namespace SQL_Project
         {
             Populate("Batata", listaBatatas);
             i = (int)util.Count(c, "Batata").Rows[0][0];
+            //InsertFert();
         }
 
         private void Populate(string selection, DataGridView lista)
@@ -51,7 +51,7 @@ namespace SQL_Project
             if (TipoTextBox.Text.ToString() != "" && DescTextBox.Text.ToString() != "" &&
                 EpocaTextBox.Text.ToString() != "" && PrecoTextBox.Text.ToString() != "")
             {
-                string query = "Insert into Batata values(@BatataID, @Tipo, @Descricao, @Epoca, @PrecoKg)";
+                string query = "Execute InsertBatata @BatataID, @Tipo, @Descricao, @Epoca, @PrecoKg";
 
                 SqlCommand command = new SqlCommand(query, c);
 
@@ -78,9 +78,11 @@ namespace SQL_Project
         {
             foreach(DataGridViewRow row in listaBatatas.SelectedRows)
             {
-                string query = "DELETE FROM Batata WHERE BatataID = " + row.Cells[0].Value;
+                string query = "Execute DeleteBatata @BatataID";
 
                 SqlCommand command = new SqlCommand(query, c);
+
+                command.Parameters.AddWithValue("@BatataID", row.Cells[0].Value);
 
                 c.Open();
                 command.ExecuteNonQuery();
@@ -132,8 +134,8 @@ namespace SQL_Project
         {
             DataTable result = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT Batata.Tipo FROM Batata JOIN Plantacao ON Batata.BatataID = Plantacao.BatataID "
-                + "JOINS Terreno on Terreno.TerrenoID = Plantacao.TerrenoID " +
-                "JOINS Fertilizante on Fertilizante.FertilizanteID = Plantacao.FertilizanteID " +
+                + "JOIN Terreno on Terreno.TerrenoID = Plantacao.TerrenoID " +
+                "JOIN Fertilizante on Fertilizante.FertilizanteID = Plantacao.FertilizanteID " +
                 "WHERE Plantacao.FertilizanteID = " + myFertilizer + " AND Plantacao.TerrenoID = " + myTerrain, connectionString);
             c.Open();
             adapter.Fill(result);

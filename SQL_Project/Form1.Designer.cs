@@ -59,7 +59,7 @@
             // 
             // TipoTextBox
             // 
-            this.TipoTextBox.Location = new System.Drawing.Point(78, 36);
+            this.TipoTextBox.Location = new System.Drawing.Point(99, 36);
             this.TipoTextBox.Name = "TipoTextBox";
             this.TipoTextBox.Size = new System.Drawing.Size(134, 22);
             this.TipoTextBox.TabIndex = 5;
@@ -67,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 39);
+            this.label1.Location = new System.Drawing.Point(57, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 17);
             this.label1.TabIndex = 4;
@@ -75,7 +75,7 @@
             // 
             // EpocaTextBox
             // 
-            this.EpocaTextBox.Location = new System.Drawing.Point(78, 84);
+            this.EpocaTextBox.Location = new System.Drawing.Point(99, 84);
             this.EpocaTextBox.Name = "EpocaTextBox";
             this.EpocaTextBox.Size = new System.Drawing.Size(134, 22);
             this.EpocaTextBox.TabIndex = 7;
@@ -83,7 +83,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 87);
+            this.label2.Location = new System.Drawing.Point(45, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 6;
@@ -91,7 +91,7 @@
             // 
             // PrecoTextBox
             // 
-            this.PrecoTextBox.Location = new System.Drawing.Point(78, 132);
+            this.PrecoTextBox.Location = new System.Drawing.Point(99, 132);
             this.PrecoTextBox.Name = "PrecoTextBox";
             this.PrecoTextBox.Size = new System.Drawing.Size(134, 22);
             this.PrecoTextBox.TabIndex = 11;
@@ -99,7 +99,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(-4, 135);
+            this.label3.Location = new System.Drawing.Point(17, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 10;
@@ -107,7 +107,7 @@
             // 
             // DescTextBox
             // 
-            this.DescTextBox.Location = new System.Drawing.Point(301, 34);
+            this.DescTextBox.Location = new System.Drawing.Point(322, 34);
             this.DescTextBox.Multiline = true;
             this.DescTextBox.Name = "DescTextBox";
             this.DescTextBox.Size = new System.Drawing.Size(214, 118);
@@ -116,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(224, 37);
+            this.label4.Location = new System.Drawing.Point(245, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 12;
@@ -124,7 +124,7 @@
             // 
             // Insert
             // 
-            this.Insert.Location = new System.Drawing.Point(13, 185);
+            this.Insert.Location = new System.Drawing.Point(34, 185);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(161, 73);
             this.Insert.TabIndex = 14;
@@ -134,7 +134,7 @@
             // 
             // Change
             // 
-            this.Change.Location = new System.Drawing.Point(172, 264);
+            this.Change.Location = new System.Drawing.Point(193, 264);
             this.Change.Name = "Change";
             this.Change.Size = new System.Drawing.Size(161, 73);
             this.Change.TabIndex = 15;
@@ -144,7 +144,7 @@
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(354, 185);
+            this.Delete.Location = new System.Drawing.Point(375, 185);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(161, 73);
             this.Delete.TabIndex = 16;
@@ -157,7 +157,7 @@
             this.listaBatatas.AllowUserToAddRows = false;
             this.listaBatatas.AllowUserToDeleteRows = false;
             this.listaBatatas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaBatatas.Location = new System.Drawing.Point(13, 360);
+            this.listaBatatas.Location = new System.Drawing.Point(34, 360);
             this.listaBatatas.Name = "listaBatatas";
             this.listaBatatas.ReadOnly = true;
             this.listaBatatas.RowTemplate.Height = 24;
@@ -172,17 +172,17 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(580, 31);
+            this.textBox1.Location = new System.Drawing.Point(601, 31);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(287, 45);
             this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "Qual o tipo de Batata que foi plantada no terreno Y e que usou fertilizante Y?";
+            this.textBox1.Text = "Qual o tipo de Batata que foi plantada no terreno 2 e que usou fertilizante 15?";
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(627, 176);
+            this.dataGridView2.Location = new System.Drawing.Point(648, 176);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(240, 378);
@@ -190,7 +190,7 @@
             // 
             // buttonFind
             // 
-            this.buttonFind.Location = new System.Drawing.Point(706, 104);
+            this.buttonFind.Location = new System.Drawing.Point(727, 104);
             this.buttonFind.Name = "buttonFind";
             this.buttonFind.Size = new System.Drawing.Size(75, 23);
             this.buttonFind.TabIndex = 20;
@@ -200,7 +200,7 @@
             // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(879, 602);
+            this.ClientSize = new System.Drawing.Size(920, 602);
             this.Controls.Add(this.buttonFind);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox1);
