@@ -43,9 +43,13 @@
             this.Delete = new System.Windows.Forms.Button();
             this.listaBatatas = new System.Windows.Forms.DataGridView();
             this.quintaDeBatatasDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.buttonFind = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.quintaDeBatatasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaBatatas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quintaDeBatatasDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // quintaDeBatatasDataSet
@@ -55,7 +59,7 @@
             // 
             // TipoTextBox
             // 
-            this.TipoTextBox.Location = new System.Drawing.Point(203, 38);
+            this.TipoTextBox.Location = new System.Drawing.Point(78, 36);
             this.TipoTextBox.Name = "TipoTextBox";
             this.TipoTextBox.Size = new System.Drawing.Size(134, 22);
             this.TipoTextBox.TabIndex = 5;
@@ -63,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(161, 41);
+            this.label1.Location = new System.Drawing.Point(36, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 17);
             this.label1.TabIndex = 4;
@@ -71,7 +75,7 @@
             // 
             // EpocaTextBox
             // 
-            this.EpocaTextBox.Location = new System.Drawing.Point(203, 86);
+            this.EpocaTextBox.Location = new System.Drawing.Point(78, 84);
             this.EpocaTextBox.Name = "EpocaTextBox";
             this.EpocaTextBox.Size = new System.Drawing.Size(134, 22);
             this.EpocaTextBox.TabIndex = 7;
@@ -79,7 +83,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(149, 89);
+            this.label2.Location = new System.Drawing.Point(24, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 6;
@@ -87,7 +91,7 @@
             // 
             // PrecoTextBox
             // 
-            this.PrecoTextBox.Location = new System.Drawing.Point(203, 134);
+            this.PrecoTextBox.Location = new System.Drawing.Point(78, 132);
             this.PrecoTextBox.Name = "PrecoTextBox";
             this.PrecoTextBox.Size = new System.Drawing.Size(134, 22);
             this.PrecoTextBox.TabIndex = 11;
@@ -95,7 +99,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(121, 137);
+            this.label3.Location = new System.Drawing.Point(-4, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 10;
@@ -103,7 +107,7 @@
             // 
             // DescTextBox
             // 
-            this.DescTextBox.Location = new System.Drawing.Point(485, 38);
+            this.DescTextBox.Location = new System.Drawing.Point(301, 34);
             this.DescTextBox.Multiline = true;
             this.DescTextBox.Name = "DescTextBox";
             this.DescTextBox.Size = new System.Drawing.Size(214, 118);
@@ -112,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(408, 41);
+            this.label4.Location = new System.Drawing.Point(224, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 12;
@@ -120,7 +124,7 @@
             // 
             // Insert
             // 
-            this.Insert.Location = new System.Drawing.Point(51, 249);
+            this.Insert.Location = new System.Drawing.Point(13, 185);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(161, 73);
             this.Insert.TabIndex = 14;
@@ -130,7 +134,7 @@
             // 
             // Change
             // 
-            this.Change.Location = new System.Drawing.Point(354, 249);
+            this.Change.Location = new System.Drawing.Point(172, 264);
             this.Change.Name = "Change";
             this.Change.Size = new System.Drawing.Size(161, 73);
             this.Change.TabIndex = 15;
@@ -140,7 +144,7 @@
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(660, 249);
+            this.Delete.Location = new System.Drawing.Point(354, 185);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(161, 73);
             this.Delete.TabIndex = 16;
@@ -157,7 +161,7 @@
             this.listaBatatas.Name = "listaBatatas";
             this.listaBatatas.ReadOnly = true;
             this.listaBatatas.RowTemplate.Height = 24;
-            this.listaBatatas.Size = new System.Drawing.Size(854, 230);
+            this.listaBatatas.Size = new System.Drawing.Size(502, 230);
             this.listaBatatas.TabIndex = 17;
             this.listaBatatas.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.listaBatatas_CellMouseDoubleClick);
             // 
@@ -166,9 +170,40 @@
             this.quintaDeBatatasDataSetBindingSource.DataSource = this.quintaDeBatatasDataSet;
             this.quintaDeBatatasDataSetBindingSource.Position = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(580, 31);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(287, 45);
+            this.textBox1.TabIndex = 18;
+            this.textBox1.Text = "Qual o tipo de Batata que foi plantada no terreno Y e que usou fertilizante Y?";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(627, 176);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(240, 378);
+            this.dataGridView2.TabIndex = 19;
+            // 
+            // buttonFind
+            // 
+            this.buttonFind.Location = new System.Drawing.Point(706, 104);
+            this.buttonFind.Name = "buttonFind";
+            this.buttonFind.Size = new System.Drawing.Size(75, 23);
+            this.buttonFind.TabIndex = 20;
+            this.buttonFind.Text = "Find Out!";
+            this.buttonFind.UseVisualStyleBackColor = true;
+            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
+            // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(879, 602);
+            this.Controls.Add(this.buttonFind);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listaBatatas);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Change);
@@ -187,6 +222,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.quintaDeBatatasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaBatatas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quintaDeBatatasDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,6 +244,9 @@
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.DataGridView listaBatatas;
         private System.Windows.Forms.BindingSource quintaDeBatatasDataSetBindingSource;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button buttonFind;
     }
 }
 

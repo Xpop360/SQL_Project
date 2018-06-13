@@ -17,6 +17,8 @@ namespace SQL_Project
         Utilities util = new Utilities();
         DataTable result;
         SqlConnection c;
+        string myFertilizer = "X";
+        string myTerrain = "Y";
 
         int i;
 
@@ -124,6 +126,24 @@ namespace SQL_Project
                 MessageBox.Show("Double Click the arrow on the left, not a random cell :(", "Error");
             }
 
+        }
+
+        private void MtsTabelasEx(DataGridView lista)
+        {
+            DataTable result = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Batata.Tipo FROM Batata JOIN Plantacao ON Batata.BatataID = Plantacao.BatataID "
+                + "JOINS Terreno on Terreno.TerrenoID = Plantacao.TerrenoID " +
+                "JOINS Fertilizante on Fertilizante.FertilizanteID = Plantacao.FertilizanteID " +
+                "WHERE Plantacao.FertilizanteID = " + myFertilizer + " AND Plantacao.TerrenoID = " + myTerrain, connectionString);
+            c.Open();
+            adapter.Fill(result);
+            lista.DataSource = result;
+            c.Close();
+        }
+
+        private void buttonFind_Click(object sender, EventArgs e)
+        {
+            MtsTabelasEx(dataGridView2);
         }
     }
 }
