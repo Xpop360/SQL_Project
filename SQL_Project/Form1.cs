@@ -50,8 +50,8 @@ namespace SQL_Project
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            if (TipoTextBox.Text.ToString() != null && DescTextBox.Text.ToString() != null &&
-                EpocaTextBox.Text.ToString() != null)
+            if (TipoTextBox.Text.ToString() != "" && DescTextBox.Text.ToString() != "" &&
+                EpocaTextBox.Text.ToString() != "")
             {
                 string query = "Insert into Batata values(@Tipo, @Descricao, @Epoca, @PrecoKg)";
 
