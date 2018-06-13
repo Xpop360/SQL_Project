@@ -27,11 +27,13 @@ namespace SQL_Project
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        { }
+        {
+            Populate("Plantacao", listaColheitas);
+        }
 
         private void listaColheitas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Populate("Batata", listaColheitas);
+
         }
 
         private void Populate(string selection, ListBox lista)
@@ -68,6 +70,7 @@ namespace SQL_Project
             {
                 MessageBox.Show("Missing values!", "Failed Operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Populate("Batata", listaColheitas);
         }
     }
 }
