@@ -17,6 +17,7 @@ namespace SQL_Project
         Utilities util = new Utilities();
         DataTable result;
         SqlConnection c;
+
         int i;
 
         string connectionString;
@@ -30,6 +31,7 @@ namespace SQL_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             Populate("Batata", listaBatatas);
+            i = listaBatatas.RowCount;
         }
 
         private void Populate(string selection, DataGridView lista)
