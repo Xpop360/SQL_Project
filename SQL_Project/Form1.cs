@@ -15,6 +15,8 @@ namespace SQL_Project
     public partial class MainForm : Form
     {
         Utilities util = new Utilities();
+        DataTable result;
+        SqlConnection c;
 
         string connectionString;
 
@@ -25,25 +27,43 @@ namespace SQL_Project
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            Populate("Plantacao", listaColheitas);
-        }
+        { }
 
         private void listaColheitas_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Populate("Batata", listaColheitas);
         }
 
         private void Populate(string selection,ListBox lista)
         {
-            SqlConnection c = new SqlConnection(connectionString);
+            c = new SqlConnection(connectionString);
             c.Open();
-            DataTable result = new DataTable();
+            result = new DataTable();
             result = util.selectAllFrom(c, selection);
             lista.DisplayMember = result.TableName + "ID";
             lista.ValueMember = lista.DisplayMember;
             lista.DataSource = result;
             c.Close();
+        }
+
+        private void Insert_Click(object sender, EventArgs e)
+        {
+            if(TipoTextBox.Text.ToString() == null || DescTextBox.Text.ToString() == null ||
+                EpocaTextBox.Text.ToString() == null)
+            {
+                string query = "Insert into Batata values(@Tipo, @Descricao, @Epoca, @PrecoKg)";
+
+                SqlCommand command = new SqlCommand(query, c);
+
+                c.Open();
+                command.Parameters.AddWithValue("@Tipo", TipoTextBox.Text);
+                command.Parameters.AddWithValue("@Descricao", DescTextBox.Text);
+                command.Parameters.AddWithValue("@Epoca", EpocaTextBox.Text);
+                command.Parameters.AddWithValue("@PrecoKg", PrecoTextBox.Text);
+
+                command.ExecuteScalar();
+                c.Close();
+            }
         }
     }
 }

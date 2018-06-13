@@ -7,3 +7,17 @@ C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_P
 C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_Project.csproj.GenerateResource.Cache
 C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_Project.exe
 C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\obj\Debug\SQL_Project.pdb
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.csprojAssemblyReference.cache
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.exe
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.pdb
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\SQL_Project.exe.config
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\SQL_Project.exe
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\SQL_Project.pdb
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.MainForm.resources
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.Properties.Resources.resources
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.csproj.GenerateResource.cache
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.csproj.CoreCompileInputs.cache
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.Designer.cs
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.xsc
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.xsd
+C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.xss
