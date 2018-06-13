@@ -74,7 +74,6 @@ namespace SQL_Project
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            //for(int j = 0; j < listaBatatas.SelectedRows.Count; j++)
             foreach(DataGridViewRow row in listaBatatas.SelectedRows)
             {
                 string query = "DELETE FROM Batata WHERE BatataID = " + row.Cells[0].Value;
@@ -84,9 +83,40 @@ namespace SQL_Project
                 c.Open();
                 command.ExecuteNonQuery();
                 c.Close();
-            }       
+            }
+
+            i--;
+            Populate("Batata", listaBatatas);
+        }
+
+        private void Change_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE Batata SET Tipo = @Tipo, Descricao = @Descricao," +
+                "Epoca = @Epoca, PrecoKg = @PrecoKg";
+
+            SqlCommand command = new SqlCommand(query, c);
+
+            decimal preco = Convert.ToDecimal(PrecoTextBox.Text);
+
+            c.Open();
+            command.Parameters.AddWithValue("@Tipo", TipoTextBox.Text);
+            command.Parameters.AddWithValue("@Descricao", DescTextBox.Text);
+            command.Parameters.AddWithValue("@Epoca", EpocaTextBox.Text);
+            command.Parameters.AddWithValue("@PrecoKg", preco);
+
+            command.ExecuteNonQuery();
+            c.Close();
+
 
             Populate("Batata", listaBatatas);
+        }
+
+        private void listaBatatas_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            TipoTextBox.Text = listaBatatas.SelectedRows[0].Cells[1].Value.ToString();
+            DescTextBox.Text = listaBatatas.SelectedRows[0].Cells[2].Value.ToString();
+            EpocaTextBox.Text = listaBatatas.SelectedRows[0].Cells[3].Value.ToString();
+            PrecoTextBox.Text = listaBatatas.SelectedRows[0].Cells[4].Value.ToString();
         }
     }
 }

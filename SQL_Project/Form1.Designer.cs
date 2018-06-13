@@ -136,6 +136,7 @@
             this.Change.TabIndex = 15;
             this.Change.Text = "Alterar";
             this.Change.UseVisualStyleBackColor = true;
+            this.Change.Click += new System.EventHandler(this.Change_Click);
             // 
             // Delete
             // 
@@ -158,6 +159,7 @@
             this.listaBatatas.RowTemplate.Height = 24;
             this.listaBatatas.Size = new System.Drawing.Size(854, 230);
             this.listaBatatas.TabIndex = 17;
+            this.listaBatatas.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.listaBatatas_CellMouseDoubleClick);
             // 
             // quintaDeBatatasDataSetBindingSource
             // 
