@@ -21,3 +21,7 @@ C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\QuintaDeBat
 C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.xsc
 C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.xsd
 C:\Users\barre\OneDrive\Documentos\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.xss
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.Designer.cs
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.xsc
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.xsd
+C:\Users\andre\OneDrive\Documents\GitHub\SQL_Project\SQL_Project\bin\Debug\QuintaDeBatatasDataSet.xss

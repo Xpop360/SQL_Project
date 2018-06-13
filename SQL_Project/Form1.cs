@@ -34,7 +34,7 @@ namespace SQL_Project
             Populate("Batata", listaColheitas);
         }
 
-        private void Populate(string selection,ListBox lista)
+        private void Populate(string selection, ListBox lista)
         {
             c = new SqlConnection(connectionString);
             c.Open();
@@ -48,8 +48,8 @@ namespace SQL_Project
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            if(TipoTextBox.Text.ToString() == null || DescTextBox.Text.ToString() == null ||
-                EpocaTextBox.Text.ToString() == null)
+            if (TipoTextBox.Text.ToString() != null && DescTextBox.Text.ToString() != null &&
+                EpocaTextBox.Text.ToString() != null)
             {
                 string query = "Insert into Batata values(@Tipo, @Descricao, @Epoca, @PrecoKg)";
 
@@ -63,6 +63,10 @@ namespace SQL_Project
 
                 command.ExecuteScalar();
                 c.Close();
+            }
+            else
+            {
+                MessageBox.Show("Missing values!", "Failed Operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
