@@ -19,7 +19,7 @@ namespace SQL_Project
         SqlConnection c;
         int myFertilizer = 15, myTerrain = 2;
 
-        int i;
+        int totalbatatas;
 
         string connectionString;
 
@@ -32,7 +32,7 @@ namespace SQL_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             Populate("Batata", listaBatatas);
-            i = (int)util.Count(c, "Batata").Rows[0][0];
+            totalbatatas = (int)util.Count(c, "Batata").Rows[0][0];
             //InsertFert();
         }
 
@@ -58,7 +58,7 @@ namespace SQL_Project
                 decimal preco = Convert.ToDecimal(PrecoTextBox.Text);
 
                 c.Open();
-                command.Parameters.AddWithValue("@BatataID", i++);
+                command.Parameters.AddWithValue("@BatataID", GenID(listaBatatas));
                 command.Parameters.AddWithValue("@Tipo", TipoTextBox.Text);
                 command.Parameters.AddWithValue("@Descricao", DescTextBox.Text);
                 command.Parameters.AddWithValue("@Epoca", EpocaTextBox.Text);
@@ -88,8 +88,6 @@ namespace SQL_Project
                 command.ExecuteNonQuery();
                 c.Close();
             }
-
-            i--;
             Populate("Batata", listaBatatas);
         }
 
@@ -146,6 +144,28 @@ namespace SQL_Project
         private void buttonFind_Click(object sender, EventArgs e)
         {
             MtsTabelasEx(dataGridView2);
+        }
+
+        private int GenID(DataGridView lista)
+        {
+            int k = 0;
+            while(!CheckID(lista,k))
+            {
+                k++;
+            }
+            return k;
+        }
+
+        private bool CheckID(DataGridView lista, int k)
+        {
+            foreach (DataGridViewRow row in lista.Rows)
+            {
+                if (k == (int)row.Cells[0].Value)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
