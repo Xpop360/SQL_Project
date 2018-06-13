@@ -31,7 +31,8 @@ namespace SQL_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             Populate("Batata", listaBatatas);
-            i = listaBatatas.RowCount;
+            //i = listaBatatas.RowCount;
+            i = (int)util.Count(c, "Batata").Rows[0][0];
         }
 
         private void Populate(string selection, DataGridView lista)

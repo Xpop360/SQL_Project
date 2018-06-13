@@ -20,5 +20,15 @@ namespace SQL_Project
             adapter.Fill(result);
             return result;
         }
+
+        public DataTable Count(SqlConnection connectionstring,string tabela)
+        {
+            DataTable result = new DataTable();
+            result = selectAllFrom(connectionstring, tabela);
+            SqlDataAdapter adapter = new SqlDataAdapter("HAVING COUNT(" + tabela + "ID)", connectionstring);
+            adapter.Fill(result);
+
+            return result;
+        }
     }
 }
