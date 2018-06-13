@@ -145,6 +145,7 @@
             this.Delete.TabIndex = 16;
             this.Delete.Text = "Eliminar";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // listaBatatas
             // 

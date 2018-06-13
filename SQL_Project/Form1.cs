@@ -31,7 +31,6 @@ namespace SQL_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             Populate("Batata", listaBatatas);
-            //i = listaBatatas.RowCount;
             i = (int)util.Count(c, "Batata").Rows[0][0];
         }
 
@@ -70,6 +69,23 @@ namespace SQL_Project
             {
                 MessageBox.Show("Missing values!", "Failed Operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Populate("Batata", listaBatatas);
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            //for(int j = 0; j < listaBatatas.SelectedRows.Count; j++)
+            foreach(DataGridViewRow row in listaBatatas.SelectedRows)
+            {
+                string query = "DELETE FROM Batata WHERE BatataID = " + row.Cells[0].Value;
+
+                SqlCommand command = new SqlCommand(query, c);
+
+                c.Open();
+                command.ExecuteNonQuery();
+                c.Close();
+            }       
+
             Populate("Batata", listaBatatas);
         }
     }
