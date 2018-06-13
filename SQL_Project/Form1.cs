@@ -17,6 +17,7 @@ namespace SQL_Project
         Utilities util = new Utilities();
         DataTable result;
         SqlConnection c;
+        int i;
 
         string connectionString;
 
@@ -28,22 +29,15 @@ namespace SQL_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Populate("Plantacao", listaColheitas);
+            Populate("Batata", listaBatatas);
         }
 
-        private void listaColheitas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Populate(string selection, ListBox lista)
+        private void Populate(string selection, DataGridView lista)
         {
             c = new SqlConnection(connectionString);
             c.Open();
             result = new DataTable();
             result = util.selectAllFrom(c, selection);
-            lista.DisplayMember = result.TableName + "ID";
-            lista.ValueMember = lista.DisplayMember;
             lista.DataSource = result;
             c.Close();
         }
@@ -51,26 +45,29 @@ namespace SQL_Project
         private void Insert_Click(object sender, EventArgs e)
         {
             if (TipoTextBox.Text.ToString() != "" && DescTextBox.Text.ToString() != "" &&
-                EpocaTextBox.Text.ToString() != "")
+                EpocaTextBox.Text.ToString() != "" && PrecoTextBox.Text.ToString() != "")
             {
-                string query = "Insert into Batata values(@Tipo, @Descricao, @Epoca, @PrecoKg)";
+                string query = "Insert into Batata values(@BatataID, @Tipo, @Descricao, @Epoca, @PrecoKg)";
 
                 SqlCommand command = new SqlCommand(query, c);
 
+                decimal preco = Convert.ToDecimal(PrecoTextBox.Text);
+
                 c.Open();
+                command.Parameters.AddWithValue("@BatataID", i++);
                 command.Parameters.AddWithValue("@Tipo", TipoTextBox.Text);
                 command.Parameters.AddWithValue("@Descricao", DescTextBox.Text);
                 command.Parameters.AddWithValue("@Epoca", EpocaTextBox.Text);
-                command.Parameters.AddWithValue("@PrecoKg", PrecoTextBox.Text);
+                command.Parameters.AddWithValue("@PrecoKg", preco);
 
-                command.ExecuteScalar();
+                command.ExecuteNonQuery();
                 c.Close();
             }
             else
             {
                 MessageBox.Show("Missing values!", "Failed Operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            Populate("Batata", listaColheitas);
+            Populate("Batata", listaBatatas);
         }
     }
 }

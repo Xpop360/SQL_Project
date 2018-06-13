@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.quintaDeBatatasDataSet = new SQL_Project.QuintaDeBatatasDataSet();
-            this.listaColheitas = new System.Windows.Forms.ListBox();
             this.TipoTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.EpocaTextBox = new System.Windows.Forms.TextBox();
@@ -41,23 +41,17 @@
             this.Insert = new System.Windows.Forms.Button();
             this.Change = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
+            this.listaBatatas = new System.Windows.Forms.DataGridView();
+            this.quintaDeBatatasDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.quintaDeBatatasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaBatatas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quintaDeBatatasDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // quintaDeBatatasDataSet
             // 
             this.quintaDeBatatasDataSet.DataSetName = "QuintaDeBatatasDataSet";
             this.quintaDeBatatasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listaColheitas
-            // 
-            this.listaColheitas.FormattingEnabled = true;
-            this.listaColheitas.ItemHeight = 16;
-            this.listaColheitas.Location = new System.Drawing.Point(12, 410);
-            this.listaColheitas.Name = "listaColheitas";
-            this.listaColheitas.Size = new System.Drawing.Size(855, 180);
-            this.listaColheitas.TabIndex = 1;
-            this.listaColheitas.SelectedIndexChanged += new System.EventHandler(this.listaColheitas_SelectedIndexChanged);
             // 
             // TipoTextBox
             // 
@@ -152,9 +146,27 @@
             this.Delete.Text = "Eliminar";
             this.Delete.UseVisualStyleBackColor = true;
             // 
+            // listaBatatas
+            // 
+            this.listaBatatas.AllowUserToAddRows = false;
+            this.listaBatatas.AllowUserToDeleteRows = false;
+            this.listaBatatas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaBatatas.Location = new System.Drawing.Point(13, 360);
+            this.listaBatatas.Name = "listaBatatas";
+            this.listaBatatas.ReadOnly = true;
+            this.listaBatatas.RowTemplate.Height = 24;
+            this.listaBatatas.Size = new System.Drawing.Size(854, 230);
+            this.listaBatatas.TabIndex = 17;
+            // 
+            // quintaDeBatatasDataSetBindingSource
+            // 
+            this.quintaDeBatatasDataSetBindingSource.DataSource = this.quintaDeBatatasDataSet;
+            this.quintaDeBatatasDataSetBindingSource.Position = 0;
+            // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(879, 602);
+            this.Controls.Add(this.listaBatatas);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Change);
             this.Controls.Add(this.Insert);
@@ -166,11 +178,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TipoTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listaColheitas);
             this.Name = "MainForm";
             this.Text = "A pretty Window";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.quintaDeBatatasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaBatatas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quintaDeBatatasDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +192,6 @@
         #endregion
 
         private QuintaDeBatatasDataSet quintaDeBatatasDataSet;
-        private System.Windows.Forms.ListBox listaColheitas;
         private System.Windows.Forms.TextBox TipoTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox EpocaTextBox;
@@ -191,6 +203,8 @@
         private System.Windows.Forms.Button Insert;
         private System.Windows.Forms.Button Change;
         private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.DataGridView listaBatatas;
+        private System.Windows.Forms.BindingSource quintaDeBatatasDataSetBindingSource;
     }
 }
 
