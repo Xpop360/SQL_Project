@@ -92,7 +92,7 @@ namespace SQL_Project
         private void Change_Click(object sender, EventArgs e)
         {
             string query = "UPDATE Batata SET Tipo = @Tipo, Descricao = @Descricao," +
-                "Epoca = @Epoca, PrecoKg = @PrecoKg";
+                "Epoca = @Epoca, PrecoKg = @PrecoKg where BatataID = " + listaBatatas.SelectedRows[0].Cells[0].Value;
 
             SqlCommand command = new SqlCommand(query, c);
 
@@ -107,16 +107,23 @@ namespace SQL_Project
             command.ExecuteNonQuery();
             c.Close();
 
-
             Populate("Batata", listaBatatas);
         }
 
         private void listaBatatas_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            TipoTextBox.Text = listaBatatas.SelectedRows[0].Cells[1].Value.ToString();
-            DescTextBox.Text = listaBatatas.SelectedRows[0].Cells[2].Value.ToString();
-            EpocaTextBox.Text = listaBatatas.SelectedRows[0].Cells[3].Value.ToString();
-            PrecoTextBox.Text = listaBatatas.SelectedRows[0].Cells[4].Value.ToString();
+            try
+            {
+                TipoTextBox.Text = listaBatatas.SelectedRows[0].Cells[1].Value.ToString();
+                DescTextBox.Text = listaBatatas.SelectedRows[0].Cells[2].Value.ToString();
+                EpocaTextBox.Text = listaBatatas.SelectedRows[0].Cells[3].Value.ToString();
+                PrecoTextBox.Text = listaBatatas.SelectedRows[0].Cells[4].Value.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Double Click the arrow on the left, not a random cell :(", "Error");
+            }
+
         }
     }
 }
